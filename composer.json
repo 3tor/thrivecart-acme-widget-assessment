@@ -1,0 +1,17 @@
+{
+    "name": "etornam/acme-widget-assessment",
+    "description": "Acme Widget Co Sales System Proof of Concept",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Etornam Kudolo",
+            "email": "kudoloetornam@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}

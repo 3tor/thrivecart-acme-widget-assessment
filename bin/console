@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+
+<?php
+require __DIR__ . '/../bootstrap.php';
+
+use App\Commands\BasketCommand;
+
+$commands = [
+    'basket' => BasketCommand::class,
+];
+
+$argv = $_SERVER['argv'];
+$commandName = $argv[1] ?? null;
+
+if (!$commandName || !isset($commands[$commandName])) {
+    echo "Available commands:\n";
+    foreach ($commands as $name => $class) {
+        echo "  - $name\n";
+    }
+    exit(1);
+}
+
+// Run the command
+$commandClass = new $commands[$commandName]();
+$commandClass->handle();
