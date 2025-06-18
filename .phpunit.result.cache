@@ -1,0 +1,1 @@
+{"version":1,"defects":{"tests\\BasketTest::testAddProductToBasket":8,"tests\\BasketTest::testTotalCostWithoutSpecialOffer":7,"tests\\BasketTest::testTotalCostWithSpecialOfferAndDelivery":7},"times":{"tests\\BasketTest::testAddProductToBasket":0.003,"tests\\BasketTest::testTotalCostWithoutSpecialOffer":0.002,"tests\\BasketTest::testTotalCostWithSpecialOfferAndDelivery":0.004}}

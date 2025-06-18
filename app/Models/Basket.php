@@ -102,7 +102,7 @@ class Basket
         $total -= $this->calculateOffers(); 
         $total += $this->calculateDeliveryCharges($total);
 
-        return $total;
+        return $this->convertToTwoDecimals($total, 2);
     }
 
     /**
@@ -157,5 +157,14 @@ class Basket
         }, $this->products);
 
         return $result;
+    }
+
+    /**
+     * Convert total to two decimal places without rounding up
+     */
+    public function convertToTwoDecimals(float $number, int $decimals): float
+    {
+        $factor = pow(10, $decimals);
+        return floor($number * $factor) / $factor;
     }
 }
